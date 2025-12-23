@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    min-height: 50px;
+    background: lightcyan;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+
+    min-height: 50px;
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+.center-el {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.rights-reserved {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
