@@ -19,8 +19,24 @@ body {
 }
 
 header {
-    min-height: 50px;
-    background: lightcyan;
+    min-height: 75px;
+    background: #D0A74E;
+    display: flex;
+    align-items: center;
+}
+
+header div {
+    margin-left: 20px;
+}
+
+header div img {
+    height: 8%;
+    width: 8%;
+}
+
+h1 {
+    color: white;
+    font-size: 1.65rem;
 }
 
 main {
@@ -35,12 +51,22 @@ footer {
 }
 
 hr {
+    margin: 50px 0px;
     border: 1px solid #333;
+}
+
+.hug-left {
+    margin-left: 0px !important;
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
 }
 
 .horizontal-align {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .center-el {
