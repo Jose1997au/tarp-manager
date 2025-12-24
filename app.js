@@ -30,10 +30,10 @@ fetch("data.json").then(res => res.json()).then(data => {
         id: $("id")
     }
 
-    elements.size.value = data.size;
-    elements.type.value = data.type;
-    elements.color.value = data.color;
-    elements.weightClass = data.weight_class;
+    elements.size.textContent = data.size;
+    elements.type.textContent = data.type;
+    elements.color.textContent = data.color;
+    elements.weightClass.textContent = data.weight_class;
 
 }).catch(err => {
     $("tarp-title").textContent = "Error loading tarp data";
