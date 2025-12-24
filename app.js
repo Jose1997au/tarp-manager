@@ -30,10 +30,11 @@ fetch("data.json").then(res => res.json()).then(data => {
         id: $("id")
     }
 
-    elements.size.textContent = data.size;
-    elements.type.textContent = data.type;
-    elements.color.textContent = data.color;
-    elements.weightClass.textContent = data.weight_class;
+    elements.size.textContent = tarp.size;
+    elements.type.textContent = tarp.type;
+    elements.color.textContent = tarp.color;
+    elements.weightClass.textContent = tarp.weight_class;
+    elements.id.textContent = tarp.id;
 
 }).catch(err => {
     console.log(err);
