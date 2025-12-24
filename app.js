@@ -21,7 +21,19 @@ fetch("data.json").then(res => res.json()).then(data => {
     }
 
     $("tarp-title").textContent = tarp.size;
-    $("meta").textContent = `ID: ${tarpID}`;
+
+    const elements = {
+        size: $("size"),
+        type: $("type"),
+        color: $("color"),
+        weightClass: $("weight_class"),
+        id: $("id")
+    }
+
+    elements.size.value = data.size;
+    elements.type.value = data.type;
+    elements.color.value = data.color;
+    elements.weightClass = data.weight_class;
 
 }).catch(err => {
     $("tarp-title").textContent = "Error loading tarp data";
