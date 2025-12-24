@@ -5,5 +5,19 @@
         "color": "White",
         "weight_class": "Heavy",
         "id": "TT-2020-A1"
+    },
+    "TT-2015-A2": {
+        "size": "20 x 15 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2015-A2"
+    },
+    "TT-15-A3": {
+        "size": "15 ft",
+        "type": "Wall",
+        "color": "White",
+        "weight_class": "Light",
+        "id": "TT-15-A2"
     }
 }
