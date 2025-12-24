@@ -36,8 +36,8 @@ fetch("data.json").then(res => res.json()).then(data => {
     elements.weightClass.textContent = data.weight_class;
 
 }).catch(err => {
+    console.log(err);
     $("tarp-title").textContent = "Error loading tarp data";
-    console.error(err);
 });
 
 const notesEl = $("notes");
