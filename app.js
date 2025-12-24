@@ -20,8 +20,6 @@ fetch("data.json").then(res => res.json()).then(data => {
         return;
     }
 
-    $("tarp-title").textContent = tarp.size;
-
     const elements = {
         size: $("size"),
         type: $("type"),
