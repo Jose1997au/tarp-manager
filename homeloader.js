@@ -1,3 +1,4 @@
+const MSG_DURATION = 10; // s
 
 const $ = (id) => document.getElementById(id);
 const C = (tag) => document.createElement(tag);
