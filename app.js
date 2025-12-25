@@ -6,6 +6,20 @@ const tarpID = params.get("id");
 
 const $ = (id) => document.getElementById(id);
 
+const typicalMsgDuration = 20
+let displayTimeout = null;
+
+function displayMessage(msg, duration) {
+    if (!duration) duration = typicalMsgDuration;
+
+    const messageDisplayer = $("displayer");
+    messageDisplayer.textContent = msg;
+    clearTimeout(displayTimeout);
+    displayTimeout = setTimeout(() => {
+        messageDisplayer.textContent = "";
+    }, duration);
+}
+
 async function fileExists(url) {
     try {
         const res = await fetch(url, { method: "HEAD" });
@@ -16,7 +30,7 @@ async function fileExists(url) {
 }
 
 if (!tarpID) {
-    
+    displayMessage("Missing Tarp ID", 30)
     throw new Error("Missing tarp ID.");
 }
 
@@ -24,8 +38,7 @@ fetch("data.json").then(res => res.json()).then(data => {
     const tarp = data[tarpID];
 
     if (!tarp) {
-
-        console.log("Tarp is missing.");       
+        displayMessage("Tarp data is missing.")
         return;
     }
 
@@ -54,8 +67,8 @@ fetch("data.json").then(res => res.json()).then(data => {
     elements.id.textContent = tarp.id;
 
 }).catch(err => {
-    console.log(err);
-    $("tarp-title").textContent = "Error loading tarp data";
+    console.error(err);
+    displayMessage("Error loading tarp data", 20);
 });
 
 const notesEl = $("notes");

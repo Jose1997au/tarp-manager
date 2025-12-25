@@ -92,6 +92,16 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+.display-container {
+    position: relative;
+}
+
+.display-msg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
