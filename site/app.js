@@ -6,6 +6,15 @@ const tarpID = params.get("id");
 
 const $ = (id) => document.getElementById(id);
 
+async function fileExists(url) {
+    try {
+        const res = await fetch(url, { method: "HEAD" });
+        return res.ok;
+    } catch {
+        return false;
+    }
+}
+
 if (!tarpID) {
     
     throw new Error("Missing tarp ID.");
@@ -21,12 +30,22 @@ fetch("data.json").then(res => res.json()).then(data => {
     }
 
     const elements = {
+        image: $("tarp_image"),
         size: $("size"),
         type: $("type"),
         color: $("color"),
         weightClass: $("weight_class"),
         id: $("id")
     }
+
+    (async () => {
+        const filePath = `images/tarps/${tarpID}.png`;
+        if (await fileExists(filePath)) {
+            elements.image.src = filePath;
+        } else {
+            console.log("Image does not exist. Displaying default image instead.");
+        }
+    }) ();
 
     elements.size.textContent = tarp.size;
     elements.type.textContent = tarp.type;

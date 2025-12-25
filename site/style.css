@@ -55,10 +55,36 @@ hr {
     border: 1px solid #333;
 }
 
-.hug-left {
-    margin-left: 0px !important;
-    justify-content: flex-start !important;
-    padding-left: 0 !important;
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.center-el {
+    display: table;
+    width: 70%;
+    max-width: 90%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    table-layout: auto;
+}
+
+td, th {
+    border: 1px solid #bdbdbd;
+    text-align: left;
+    padding: 1rem;
+    font-size: large;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tarp-image {
+    border-radius: 1rem;
+    width: 20rem;
+    display: block;
+    margin: 0 auto;
 }
 
 .horizontal-align {
