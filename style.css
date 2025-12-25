@@ -55,7 +55,7 @@ footer p {
 
 hr {
     margin: 50px 0px;
-    border: 1px solid #333;
+    border: 1.5px solid #333;
 }
 
 table {
@@ -68,7 +68,7 @@ table.center-el {
     width: 70%;
     max-width: 90%;
     min-width: 20rem;
-    margin: 1.5rem auto;
+    margin: 2.5rem auto;
     table-layout: auto;
 }
 
@@ -83,7 +83,11 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.geom-text {
+a {
+    text-decoration: none;
+}
+
+.custom-font {
     font-family: "Geom", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -101,9 +105,10 @@ tr:nth-child(even) {
 
     position: fixed;
     bottom: 0.5rem;
-    right: 0.5rem;
-    min-height: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 
+    min-height: 1.5rem;
     z-index: 5;
 }
 
@@ -116,7 +121,7 @@ tr:nth-child(even) {
 .input-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 67%;
     margin: 2.5rem auto;
     min-height: 20rem;
 }

@@ -1,6 +1,6 @@
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
-const MSG_DURATION = 20; // s
+const MSG_DURATION = 10; // s
 
 const params = new URLSearchParams(window.location.search);
 const tarpID = params.get("id");
@@ -34,7 +34,7 @@ async function fileExists(url) {
 }
 
 if (!tarpID) {
-    displayMessage("Missing Tarp ID.", 30)
+    displayMessage("Missing Tarp ID.")
     throw new Error("Missing tarp ID.");
 }
 
@@ -73,7 +73,7 @@ fetch("data.json").then(res => res.json()).then(data => {
 
 }).catch(err => {
     console.error(err);
-    displayMessage("Error loading tarp data", 20);
+    displayMessage("Error loading tarp data");
 });
 
 const notesEl = $("notes");
