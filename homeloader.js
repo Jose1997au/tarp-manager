@@ -30,6 +30,7 @@ function createHref(id) {
 
     a.href = href;
     a.textContent = id;
+    a.classList.add("custom-font");
 
     td.appendChild(a);
     tr.appendChild(td);
