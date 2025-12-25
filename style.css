@@ -122,9 +122,9 @@ a {
 .input-container {
     display: flex;
     flex-direction: column;
-    width: 67%;
+    width: 70%;
     margin: 2.5rem auto;
-    min-height: 20rem;
+    min-height: 8rem;
 }
 
 .input-container textarea {
