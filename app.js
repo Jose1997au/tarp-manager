@@ -36,7 +36,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         color: $("color"),
         weightClass: $("weight_class"),
         id: $("id")
-    }
+    };
 
     (async () => {
         const filePath = `images/tarps/${tarpID}.png`;
