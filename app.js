@@ -77,18 +77,12 @@ fetch("data.json").then(res => res.json()).then(data => {
 });
 
 const notesEl = $("notes");
+const clearNotesBtn = $("clear_notes");
 const storageKey = `${NOTES_PREFIX}${tarpID}`;
 
 notesEl.value = localStorage.getItem(storageKey) ?? "";
 
 let saveTimeout = null;
-
-notesEl.addEventListener("input", () => {
-    clearTimeout(saveTimeout);
-    saveTimeout = setTimeout(() => {
-        localStorage.setItem(storageKey, notesEl.value)
-    }, AUTOSAVE_DELAY);
-});
 
 function clearNotes() {
     if (!notesEl) return;
@@ -99,3 +93,12 @@ function clearNotes() {
     localStorage.removeItem(storageKey);
     notesEl.value = "";
 }
+
+notesEl.addEventListener("input", () => {
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(() => {
+        localStorage.setItem(storageKey, notesEl.value)
+    }, AUTOSAVE_DELAY);
+});
+
+clearNotesBtn.onclick = clearNotes;
