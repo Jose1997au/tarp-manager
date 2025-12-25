@@ -6,18 +6,74 @@
         "weight_class": "Heavy",
         "id": "TT-2020-A1"
     },
-    "TT-2015-A2": {
+    "TT-2015-A11": {
         "size": "20 x 15 ft",
         "type": "Top",
         "color": "White",
         "weight_class": "Heavy",
         "id": "TT-2015-A2"
     },
-    "TT-15-A3": {
-        "size": "15 ft",
-        "type": "Wall",
+    "TT-2020-A10": {
+        "size": "20 x 20 ft",
+        "type": "Top",
         "color": "White",
-        "weight_class": "Light",
-        "id": "TT-15-A2"
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A9": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A8": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A7": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A6": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A5": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A4": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+    "TT-2020-A3": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
+    },
+        "TT-2020-A2": {
+        "size": "20 x 20 ft",
+        "type": "Top",
+        "color": "White",
+        "weight_class": "Heavy",
+        "id": "TT-2020-A1"
     }
 }
