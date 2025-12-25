@@ -45,7 +45,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         } else {
             console.log("Image does not exist. Displaying default image instead.");
         }
-    }) ();
+    })();
 
     elements.size.textContent = tarp.size;
     elements.type.textContent = tarp.type;
