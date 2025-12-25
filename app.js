@@ -13,10 +13,13 @@ function displayMessage(msg, duration) {
     if (!duration) duration = MSG_DURATION;
     duration *= 1000;
 
+    const displayerParent = $("displayer_parent");
     const messageDisplayer = $("displayer");
+    displayerParent.style.visibility = "visible"
     messageDisplayer.textContent = msg;
     clearTimeout(displayTimeout);
     displayTimeout = setTimeout(() => {
+        displayerParent.style.visibility = "hidden";
         messageDisplayer.textContent = "";
     }, duration);
 }
@@ -31,7 +34,7 @@ async function fileExists(url) {
 }
 
 if (!tarpID) {
-    displayMessage("Missing Tarp ID", 30)
+    displayMessage("Missing Tarp ID.", 30)
     throw new Error("Missing tarp ID.");
 }
 
@@ -57,6 +60,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         if (await fileExists(filePath)) {
             elements.image.src = filePath;
         } else {
+            displayMessage(`Image for tarp with ID ${tarpID} not available.`);
             console.log("Image does not exist. Displaying default image instead.");
         }
     })();

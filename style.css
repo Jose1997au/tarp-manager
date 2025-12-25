@@ -39,7 +39,6 @@ header nav {
     min-height: 75px;
     background: #222;
     color: white;
-    display: flex;
     align-items: center;
     align-content: center;
 }
@@ -93,9 +92,24 @@ tr:nth-child(even) {
 }
 
 .toast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+    background-color: rgb(255, 91, 91);
+    visibility: hidden;
+
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2rem;
+    right: 2rem;
+    min-height: 3rem;
+}
+
+.toast p {
+    padding: 0.5rem 1rem;
+    color: white;
+    margin: 0;
 }
 
 .input-container {
