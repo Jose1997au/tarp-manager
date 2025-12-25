@@ -38,12 +38,17 @@ function createHref(id) {
 }
 
 fetch("data.json").then(res => res.json().then(data => {
-    
+    const headerCount = $("header_count");
+    let tarpsRegistered = 0;
+
     Object.keys(data).forEach(key => {
         const tarp = data[key];
         const tarpId = tarp.id;
+        tarpsRegistered += 1;
         createHref(tarpId);
     });
+
+    headerCount.textContent = `Registered Tarps | Total Tarps ${tarpsRegistered}`;
 
 })).catch(err => {
     console.error(err);
