@@ -1,16 +1,17 @@
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
+const MSG_DURATION = 20; // s
 
 const params = new URLSearchParams(window.location.search);
 const tarpID = params.get("id");
 
 const $ = (id) => document.getElementById(id);
 
-const typicalMsgDuration = 20
 let displayTimeout = null;
 
 function displayMessage(msg, duration) {
-    if (!duration) duration = typicalMsgDuration;
+    if (!duration) duration = MSG_DURATION;
+    duration *= 1000;
 
     const messageDisplayer = $("displayer");
     messageDisplayer.textContent = msg;
