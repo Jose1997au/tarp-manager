@@ -92,14 +92,10 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.display-container {
-    position: relative;
-}
-
-.display-msg {
-    position: absolute;
-    top: 0;
-    right: 0;
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 .input-container {
