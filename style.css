@@ -65,7 +65,7 @@ table {
 
 table.center-el {
     display: table;
-    width: 70%;
+    width: 85%;
     max-width: 90%;
     min-width: 20rem;
     margin: 2.5rem auto;
@@ -138,7 +138,7 @@ td i {
 .input-container {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 85%;
     margin: 2.5rem auto;
     min-height: 12rem;
 }

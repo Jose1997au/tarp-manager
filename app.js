@@ -1,6 +1,7 @@
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
 const MSG_DURATION = 10; // s
+const BULLET = "• ";
 
 const params = new URLSearchParams(window.location.search);
 const tarpID = params.get("id");
@@ -80,9 +81,26 @@ const notesEl = $("notes");
 const clearNotesBtn = $("clear_notes");
 const storageKey = `${NOTES_PREFIX}${tarpID}`;
 
-notesEl.value = localStorage.getItem(storageKey) ?? "";
-
 let saveTimeout = null;
+
+function normalizeBullets(text) {
+    const lines = text
+        .split("\n")
+        .map(line => line.trim())
+        .filter(Boolean)
+        .map(line => line.startsWith(BULLET) ? line : `${BULLET}${line}`);
+
+    return lines.join("\n");
+}
+
+try {
+    notesEl.value = localStorage.getItem(storageKey) ?? "";
+    if (notesEl.value) {
+        notesEl.value = normalizeBullets(notesEl.value);
+    }
+} catch (e) {
+    console.error("localStorage not available:", e);
+}
 
 function clearNotes() {
     if (!notesEl) return;
@@ -90,15 +108,36 @@ function clearNotes() {
     const OK = confirm("Clear notes for this tarp? (This device only)");
     if (!OK) return;
 
-    localStorage.removeItem(storageKey);
-    notesEl.value = "";
+    try {
+        localStorage.removeItem(storageKey);
+        notesEl.value = "";
+    } catch (e) {
+        console.error("Could not clear notes:", e);
+    }
 }
 
 notesEl.addEventListener("input", () => {
     clearTimeout(saveTimeout);
+
     saveTimeout = setTimeout(() => {
-        localStorage.setItem(storageKey, notesEl.value)
+        try {
+            localStorage.setItem(storageKey, notesEl.value);
+        } catch (e) {
+            console.error("Could not save notes:", e);
+        }
     }, AUTOSAVE_DELAY);
+});
+
+notesEl.addEventListener("blur", () => {
+    const normalized = normalizeBullets(notesEl.value);
+    if (normalized !== notesEl.value) {
+        notesEl.value = normalized;
+        try {
+            localStorage.setItem(storageKey, notesEl.value);
+        } catch (e) {
+            console.error("Could not save notes:", e);
+        }
+    }
 });
 
 clearNotesBtn.onclick = clearNotes;
