@@ -79,19 +79,35 @@ td, th {
     font-size: large;
 }
 
+/* td {
+    font-weight: bold;
+} */
+
 tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+button {
+    font-weight: bolder !important;
+}
+
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: black !important;
+}
+
+/* h3.custom-font button.custom-font {
+    font-weight: bold;
+} */
+
+td i {
+    margin-right: 1rem;
 }
 
 .custom-font {
     font-family: "Geom", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -124,7 +140,7 @@ a {
     flex-direction: column;
     width: 70%;
     margin: 2.5rem auto;
-    min-height: 8rem;
+    min-height: 12rem;
 }
 
 .input-container textarea {
