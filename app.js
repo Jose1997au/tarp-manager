@@ -51,7 +51,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         size: $("size"),
         type: $("type"),
         color: $("color"),
-        weightClass: $("weight_class"),
+        weightClass: $("weight"),
         id: $("id")
     };
 
@@ -68,7 +68,7 @@ fetch("data.json").then(res => res.json()).then(data => {
     elements.size.textContent = tarp.size;
     elements.type.textContent = tarp.type;
     elements.color.textContent = tarp.color;
-    elements.weightClass.textContent = tarp.weight_class;
+    elements.weightClass.textContent = tarp.weight;
     elements.id.textContent = tarp.id;
 
 }).catch(err => {

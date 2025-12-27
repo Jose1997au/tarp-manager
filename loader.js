@@ -24,14 +24,18 @@ function createHref(id) {
     const tr = C("tr");
     const td = C("td");
     const a = C("a");
+    const i = C("i");
     
     const params = `?id=${id}`;
     const href = `https://jose1997au.github.io/tarp-manager/tarp${params}`;
+
+    i.classList.add("fi-xwluxl-address-card-solid");
 
     a.href = href;
     a.textContent = id;
     a.classList.add("custom-font");
 
+    td.appendChild(i);
     td.appendChild(a);
     tr.appendChild(td);
     table.appendChild(tr);
