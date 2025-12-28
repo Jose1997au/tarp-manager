@@ -1,6 +1,7 @@
+import { $, toast } from "./utilities";
+
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
-const MSG_DURATION = 10; // s
 const BULLET = "|• ";
 
 const params = new URLSearchParams(window.location.search);
@@ -16,7 +17,7 @@ async function fileExists(url) {
 }
 
 if (!tarpID) {
-    utilities.toast("Missing Tarp ID.")
+    toast("Missing Tarp ID.")
     throw new Error("Missing tarp ID.");
 }
 
@@ -24,17 +25,17 @@ fetch("data.json").then(res => res.json()).then(data => {
     const tarp = data[tarpID];
 
     if (!tarp) {
-        utilities.toast("Tarp data is missing.")
+        toast("Tarp data is missing.")
         return;
     }
 
     const elements = {
-        image: utilities.$("tarp_image"),
-        size: utilities.$("size"),
-        type: utilities.$("type"),
-        color: utilities.$("color"),
-        weightClass: utilities.$("weight"),
-        id: utilities.$("id")
+        image: $("tarp_image"),
+        size: $("size"),
+        type: $("type"),
+        color: $("color"),
+        weightClass: $("weight"),
+        id: $("id")
     };
 
     (async () => {
@@ -42,7 +43,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         if (await fileExists(filePath)) {
             elements.image.src = filePath;
         } else {
-            utilities.toast(`Image for tarp with ID ${tarpID} not available.`);
+            toast(`Image for tarp with ID ${tarpID} not available.`);
             console.log("Image does not exist. Displaying default image instead.");
         }
     })();
@@ -55,11 +56,11 @@ fetch("data.json").then(res => res.json()).then(data => {
 
 }).catch(err => {
     console.error(err);
-    utilities.toast("Error loading tarp data");
+    toast("Error loading tarp data");
 });
 
-const notesEl = utilities.$("notes");
-const clearNotesBtn = utilities.$("clear_notes");
+const notesEl = $("notes");
+const clearNotesBtn = $("clear_notes");
 const storageKey = `${NOTES_PREFIX}${tarpID}`;
 
 let saveTimeout = null;

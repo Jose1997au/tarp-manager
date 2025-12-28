@@ -1,11 +1,11 @@
-import utilities from "./utilities";
+import { $, c, toast } from "./utilities";
 
-const table = utilities.$("tarp_hrefs");
+const table = $("tarp_hrefs");
 function createHref(id) {
-    const tr = utilities.c("tr");
-    const td = utilities.c("td");
-    const a = utilities.c("a");
-    const i = utilities.c("i");
+    const tr = c("tr");
+    const td = c("td");
+    const a = c("a");
+    const i = c("i");
     
     const params = `?id=${id}`;
     const href = `https://jose1997au.github.io/tarp-manager/tarp${params}`;
@@ -37,5 +37,5 @@ fetch("data.json").then(res => res.json().then(data => {
 
 })).catch(err => {
     console.error(err);
-    utilities.toast("Error loading tarp data.");
+    toast("Error loading tarp data.");
 });
