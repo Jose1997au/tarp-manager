@@ -1,9 +1,10 @@
-export async function onRequest({ request, env, waitUntil }) {
+export async function onRequest(context) {
+  const { request, env, waitUntil } = context;
   const url = new URL(request.url);
-  const tarpID = url.searchParams.get("id");
 
+  const tarpID = url.searchParams.get("id");
   if (!tarpID) {
-    return new Response("Missing tarp ID", { status: 400 });
+    return new Response("Missing tarp ID" + env.DISCORD_WEBHOOK_URL, { status: 400 });
   }
 
   const ip =
@@ -31,6 +32,5 @@ export async function onRequest({ request, env, waitUntil }) {
     );
   }
 
-  // Continue to tarp.html
-  return fetch(request);
+  return context.next();
 }
