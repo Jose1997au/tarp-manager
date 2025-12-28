@@ -12,7 +12,7 @@ function createHref(id) {
     const i = c("i");
     
     const params = `?id=${id}`;
-    const href = `https://jose1997au.github.io/tarp-manager/tarp${params}`;
+    const href = `/tarp${params}`;
 
     i.classList.add("fi-xwluxl-address-card-solid");
 

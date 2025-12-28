@@ -4,7 +4,7 @@ export async function onRequest(context) {
 
   const tarpID = url.searchParams.get("id");
   if (!tarpID) {
-    return new Response("Missing tarp ID" + env.DISCORD_WEBHOOK_URL, { status: 400 });
+    return new Response("Missing tarp ID", { status: 400 });
   }
 
   const ip =
