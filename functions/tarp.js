@@ -33,17 +33,17 @@ export async function onRequest(context) {
                         },
                         {
                             name: "Location",
-                            value: tarpID,
+                            value: `${cf.City || "?"}, ${cf.region || "?"}, ${cf.country || "?"}`,
                             inline: true,
                         },
                         {
                             name: "IP",
-                            value: tarpID,
+                            value: ip,
                             inline: true,
                         },
                         {
                             name: "User Agent",
-                            value: tarpID,
+                            value: ua,
                             inline: true,
                         }
                     ],
