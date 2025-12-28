@@ -1,4 +1,8 @@
-import { $, c, toast } from "./utilities.js";
+import utilities from "./utilities.js";
+
+const $ = utilities.$;
+const c = utilities.c;
+const toast = utilities.toast;
 
 const table = $("tarp_hrefs");
 function createHref(id) {
