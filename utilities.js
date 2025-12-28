@@ -18,8 +18,8 @@ export default {
         if (!duration) duration = MSG_DURATION;
         duration *= 1000;
         
-        const displayerParent = this.$("displayer_parent");
-        const messageDisplayer = this.$("displayer");
+        const displayerParent = document.getElementById("displayer_parent");
+        const messageDisplayer = document.createElement("displayer");
         displayerParent.style.visibility = "visible"
         messageDisplayer.textContent = msg;
         clearTimeout(displayTimeout);
