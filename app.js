@@ -1,4 +1,4 @@
-import { $, toast } from "./utilities";
+import { $, toast } from "./utilities.js";
 
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
