@@ -21,12 +21,38 @@ export async function onRequest(context) {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          content:
-            `🟦 NFC Scan\n` +
-            `🆔 ${tarpID}\n` +
-            `🌍 ${cf.city || "?"}, ${cf.region || "?"}, ${cf.country || "?"}\n` +
-            `📡 ${ip}\n` +
-            `📱 ${ua}\n`
+            embeds: [
+                {
+                    title: "NFC Scan",
+                    color: 0x3498db,
+                    fields: [
+                        {
+                            name: "Tarp ID",
+                            value: tarpID,
+                            inline: true,
+                        },
+                        {
+                            name: "Location",
+                            value: tarpID,
+                            inline: true,
+                        },
+                        {
+                            name: "IP",
+                            value: tarpID,
+                            inline: true,
+                        },
+                        {
+                            name: "User Agent",
+                            value: tarpID,
+                            inline: true,
+                        }
+                    ],
+                    footer: {
+                        text: "Tarp Manager • NFC Scan"
+                    },
+                    timestamp: new Date().toISOString()
+                }
+            ]
         })
       })
     );
