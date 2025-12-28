@@ -1,7 +1,7 @@
 const NOTES_PREFIX = "notes_"
 const AUTOSAVE_DELAY = 300; //ms
 const MSG_DURATION = 10; // s
-const BULLET = " • ";
+const BULLET = "| • ";
 
 const params = new URLSearchParams(window.location.search);
 const tarpID = params.get("id");
