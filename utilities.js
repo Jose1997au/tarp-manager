@@ -1,4 +1,4 @@
-MSG_DURATION = 20; // In seconds
+const MSG_DURATION = 20; // In seconds
 
 displayTimeout = null;
 
