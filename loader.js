@@ -1,30 +1,11 @@
-const MSG_DURATION = 10; // s
+import utilities from "./utilities";
 
-const $ = (id) => document.getElementById(id);
-const C = (tag) => document.createElement(tag);
-
-let displayTimeout = null;
-function displayMessage(msg, duration) {
-    if (!duration) duration = MSG_DURATION;
-    duration *= 1000;
-
-    const displayerParent = $("displayer_parent");
-    const messageDisplayer = $("displayer");
-    displayerParent.style.visibility = "visible"
-    messageDisplayer.textContent = msg;
-    clearTimeout(displayTimeout);
-    displayTimeout = setTimeout(() => {
-        displayerParent.style.visibility = "hidden";
-        messageDisplayer.textContent = "";
-    }, duration);
-}
-
-const table = $("tarp_hrefs");
+const table = utilities.$("tarp_hrefs");
 function createHref(id) {
-    const tr = C("tr");
-    const td = C("td");
-    const a = C("a");
-    const i = C("i");
+    const tr = utilities.c("tr");
+    const td = utilities.c("td");
+    const a = utilities.c("a");
+    const i = utilities.c("i");
     
     const params = `?id=${id}`;
     const href = `https://jose1997au.github.io/tarp-manager/tarp${params}`;
@@ -56,5 +37,5 @@ fetch("data.json").then(res => res.json().then(data => {
 
 })).catch(err => {
     console.error(err);
-    displayMessage("Error loading tarp data.");
+    utilities.toast("Error loading tarp data.");
 });

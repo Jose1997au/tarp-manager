@@ -6,25 +6,6 @@ const BULLET = "|• ";
 const params = new URLSearchParams(window.location.search);
 const tarpID = params.get("id");
 
-const $ = (id) => document.getElementById(id);
-
-let displayTimeout = null;
-
-function displayMessage(msg, duration) {
-    if (!duration) duration = MSG_DURATION;
-    duration *= 1000;
-
-    const displayerParent = $("displayer_parent");
-    const messageDisplayer = $("displayer");
-    displayerParent.style.visibility = "visible"
-    messageDisplayer.textContent = msg;
-    clearTimeout(displayTimeout);
-    displayTimeout = setTimeout(() => {
-        displayerParent.style.visibility = "hidden";
-        messageDisplayer.textContent = "";
-    }, duration);
-}
-
 async function fileExists(url) {
     try {
         const res = await fetch(url, { method: "HEAD" });
@@ -35,7 +16,7 @@ async function fileExists(url) {
 }
 
 if (!tarpID) {
-    displayMessage("Missing Tarp ID.")
+    utilities.toast("Missing Tarp ID.")
     throw new Error("Missing tarp ID.");
 }
 
@@ -43,17 +24,17 @@ fetch("data.json").then(res => res.json()).then(data => {
     const tarp = data[tarpID];
 
     if (!tarp) {
-        displayMessage("Tarp data is missing.")
+        utilities.toast("Tarp data is missing.")
         return;
     }
 
     const elements = {
-        image: $("tarp_image"),
-        size: $("size"),
-        type: $("type"),
-        color: $("color"),
-        weightClass: $("weight"),
-        id: $("id")
+        image: utilities.$("tarp_image"),
+        size: utilities.$("size"),
+        type: utilities.$("type"),
+        color: utilities.$("color"),
+        weightClass: utilities.$("weight"),
+        id: utilities.$("id")
     };
 
     (async () => {
@@ -61,7 +42,7 @@ fetch("data.json").then(res => res.json()).then(data => {
         if (await fileExists(filePath)) {
             elements.image.src = filePath;
         } else {
-            displayMessage(`Image for tarp with ID ${tarpID} not available.`);
+            utilities.toast(`Image for tarp with ID ${tarpID} not available.`);
             console.log("Image does not exist. Displaying default image instead.");
         }
     })();
@@ -74,11 +55,11 @@ fetch("data.json").then(res => res.json()).then(data => {
 
 }).catch(err => {
     console.error(err);
-    displayMessage("Error loading tarp data");
+    utilities.toast("Error loading tarp data");
 });
 
-const notesEl = $("notes");
-const clearNotesBtn = $("clear_notes");
+const notesEl = utilities.$("notes");
+const clearNotesBtn = utilities.$("clear_notes");
 const storageKey = `${NOTES_PREFIX}${tarpID}`;
 
 let saveTimeout = null;
