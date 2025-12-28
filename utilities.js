@@ -19,7 +19,7 @@ export default {
         duration *= 1000;
         
         const displayerParent = document.getElementById("displayer_parent");
-        const messageDisplayer = document.createElement("displayer");
+        const messageDisplayer = document.getElementById("displayer");
         displayerParent.style.visibility = "visible"
         messageDisplayer.textContent = msg;
         clearTimeout(displayTimeout);
