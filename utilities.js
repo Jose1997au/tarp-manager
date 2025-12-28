@@ -1,6 +1,6 @@
 const MSG_DURATION = 20; // In seconds
 
-const displayTimeout = null;
+let displayTimeout = null;
 
 export default {
     $(elementId) {
