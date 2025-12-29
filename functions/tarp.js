@@ -3,6 +3,8 @@ export async function onRequest(context) {
   const url = new URL(request.url);
 
   const tarpID = url.searchParams.get("id");
+  const fromScan = url.scan.get("scan");
+  if (!fromScan) return context.next();
   if (!tarpID) {
     return new Response("Missing tarp ID", { status: 400 });
   }
