@@ -33,7 +33,7 @@ export async function onRequest(context) {
                         },
                         {
                             name: "Location",
-                            value: `${cf.City || "?"}, ${cf.region || "?"}, ${cf.country || "?"}`,
+                            value: `${cf.city || "?"}, ${cf.region || "?"}, ${cf.country || "?"}`,
                             inline: true,
                         },
                         {
