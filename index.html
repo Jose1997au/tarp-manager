@@ -22,7 +22,7 @@
         <div class="banner">
             <nav class="center-el sticky-top">
                 <h1>Home</h1>
-                <caption class="subtitle custom-font">AP4W Inventory</caption>
+                <caption class="subtitle custom-font">Smart Scan</caption>
 
                 <hr class="dark-divider">
 
@@ -40,19 +40,42 @@
 
     <main>
 
+        <hr class="light-divider">
+        <h1 class="center-el light-text">Scan Logs</h1>
+        <hr class="light-divider">
 
-        <table class="center-el custom-font">
-            <tr>
-                <th>Last Scanned</th>
-                <th>10:59 AM | 12/20/2025</th>
-            </tr>
-        </table>
+        <div class="center-el title-table">
+            <div class="table-header">
+                <p class="light-text custom-font">Recent Scan Logs</p>
+            </div>
+            <div class="table-table">
+                <table>
+                    <tr>
+                        <td>NFC Scan</td>
+                        <td>Scanned at 12:59am</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-        <table class="center-el custom-font" id="tarp_hrefs">
-            <tr>
-                <th id="header_count">Registered Tarps | Count: 0</th>
-            </tr>
-        </table>
+        <hr class="light-divider">
+        <h1 class="center-el light-text">Tarps</h1>
+        <hr class="light-divider">
+
+        <div class="center-el title-table">
+            <div class="table-header">
+                <p class="light-text custom-font">All Registered Tarps</p>
+            </div>
+            <div class="table-table">
+                <table class="custom-font" id="tarp_hrefs">
+                    <tr>
+                        <th id="header_count">Registered | 0</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
 
         <div class="toast custom-font" id="displayer_parent">
             <p class="center-el" id="displayer">N/A</p>

@@ -127,6 +127,53 @@ td i {
     margin-right: 1rem;
 }
 
+table.skip {
+    margin-top: 0px !important;
+}
+
+p.light-text {
+    color: white;
+    display: flex;
+    margin: auto;
+
+    padding: 0.5rem 0;
+
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+}
+
+.title-table {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background: linear-gradient(0deg, #312d3c, #948da8);
+    color: white;
+}
+
+.table-table {
+    width: 100%;
+}
+
+.a-logs {
+    display: flex;
+    margin: auto;
+
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    width: 85%;
+}
+
 .default-divider {
     width: 100%;
     margin: 1rem 0;
@@ -222,7 +269,7 @@ td i {
     border-radius: 0 0 5px 5px;
     min-height: 2.5rem;
     color: #222;
-    background-color: rgb(244, 255, 94);
+    background: linear-gradient(0deg, #f0ff23, #faffb2);
 }
 
 .subtitle {

@@ -22,7 +22,7 @@
         <div class="banner">
             <nav class="center-el sticky-top">
                 <h1>Tarp Item</h1>
-                <caption class="subtitle custom-font">Smart Scan</caption>
+                <caption class="subtitle custom-font light-text">Smart Scan</caption>
 
                 <hr class="dark-divider">
 
@@ -44,28 +44,35 @@
         <h3 class="center-el light-text custom-font">Tarp Data</h3>
         <hr class="light-divider">
 
-        <table class="center-el custom-font">
-            <tr>
-                <td class="horizontal-"><i class="fi-snlrxl-expand"></i>Size</td>
-                <td id="size">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xnsuxl-question-mark-alt-solid"></i>Type</td>
-                <td id="type">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xnsuxl-fill-drip-solid"></i>Color</td>
-                <td id="color">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xwluxl-balance-alt-wide"></i>Weight</td>
-                <td id="weight">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xwluxl-address-card-solid"></i>Tarp ID</td>
-                <td id="id">N/A</td>
-            </tr>
-        </table>
+        <div class="center-el title-table">
+            <div class="table-header">
+                <p class="light-text custom-font">All Registered Tarps</p>
+            </div>
+            <div class="table-table">
+                <table class="custom-font">
+                    <tr>
+                        <td class="horizontal-"><i class="fi-snlrxl-expand"></i>Size</td>
+                        <td class="light-text" id="size">N/A</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fi-xnsuxl-question-mark-alt-solid"></i>Type</td>
+                        <td class="light-text" id="type">N/A</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fi-xnsuxl-fill-drip-solid"></i>Color</td>
+                        <td class="light-text" id="color">N/A</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fi-xwluxl-balance-alt-wide"></i>Weight</td>
+                        <td class="light-text" id="weight">N/A</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fi-xwluxl-address-card-solid"></i>Tarp ID</td>
+                        <td class="light-text" id="id">N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
         <hr class="light-divider">
         <h3 class="center-el light-text custom-font">Tarp Notes</h3>
@@ -73,7 +80,7 @@
 
         <div class="center-el input-container custom-font">
             <textarea id="notes" placeholder="Notes (Saved on this device only)"></textarea>
-            <button class="clear-btn" id="clear_notes">Clear Notes</button>
+            <button class="clear-btn light-text" id="clear_notes">Erase Notes</button>
         </div>
 
         <div class="toast custom-font" id="displayer_parent">

@@ -37,7 +37,7 @@ fetch("data.json").then(res => res.json().then(data => {
         createHref(tarpId);
     });
 
-    headerCount.textContent = `Registered Tarps | Count: ${tarpsRegistered}`;
+    headerCount.textContent = `Registered | ${tarpsRegistered}`;
 
 })).catch(err => {
     console.error(err);
