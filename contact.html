@@ -21,14 +21,14 @@
     <header class="custom-font">
         <div class="banner">
             <nav class="center-el sticky-top">
-                <h1>Home</h1>
-                <caption class="subtitle custom-font">AP4W Inventory</caption>
+                <h1>Contact Us</h1>
+                <caption class="subtitle custom-font">Smart Scan</caption>
 
                 <hr class="dark-divider">
 
                 <ul>
-                  <a href="index.html">
-                    <li>About</li>
+                  <a href="about.html">
+                    <li>Home</li>
                   </a>
                   <a href="contact.html">
                     <li>Contact Us</li>
@@ -41,39 +41,60 @@
     <main>
 
         <hr class="light-divider">
-        <h3 class="center-el light-text custom-font">Tarp Data</h3>
+        <h1 class="center-el light-text">Pricing</h1>
         <hr class="light-divider">
 
         <table class="center-el custom-font">
             <tr>
-                <td class="horizontal-"><i class="fi-snlrxl-expand"></i>Size</td>
-                <td id="size">N/A</td>
+                <th>Tier</th>
+                <th>Includes</th>
+                <th>Price</th>
             </tr>
             <tr>
-                <td><i class="fi-xnsuxl-question-mark-alt-solid"></i>Type</td>
-                <td id="type">N/A</td>
+                <td class="light-text">Starter</td>
+                <td class="light-text">Up to ~25 active tarps.</td>
+                <td class="light-text">$5.99/Month</td>
             </tr>
             <tr>
-                <td><i class="fi-xnsuxl-fill-drip-solid"></i>Color</td>
-                <td id="color">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xwluxl-balance-alt-wide"></i>Weight</td>
-                <td id="weight">N/A</td>
-            </tr>
-            <tr>
-                <td><i class="fi-xwluxl-address-card-solid"></i>Tarp ID</td>
-                <td id="id">N/A</td>
+                <td class="light-text">Business</td>
+                <td class="light-text">Up to ~75 active tarps.</td>
+                <td class="light-text">$14.99/Month</td>
             </tr>
         </table>
 
         <hr class="light-divider">
-        <h3 class="center-el light-text custom-font">Tarp Notes</h3>
+        <h1 class="center-el light-text">Contact us</h1>
         <hr class="light-divider">
 
-        <div class="center-el input-container custom-font">
-            <textarea id="notes" placeholder="Notes (Saved on this device only)"></textarea>
-            <button class="clear-btn" id="clear_notes">Clear Notes</button>
+        <div class="light-container">
+            <form action="">
+
+              <div class="input-group input-group-lg mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fi-xnsuxl-user-solid"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Full name" aria-label="Full name"
+                  aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="input-group input-group-lg mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fi-xwsuxl-envelope-solid"></i></span>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                  aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="input-group input-group-lg mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fi-xnsuxl-user-lock-solid"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Sign Up!</button>
+            </form>
         </div>
 
         <div class="toast custom-font" id="displayer_parent">
@@ -84,7 +105,7 @@
     <footer class="rights-reserved custom-font">
         <p>2025 &copy; Copyright. All rights reserved.</p>
     </footer>
-
+    
     <!-- Friconix -->
     <script defer src="https://friconix.com/cdn/friconix.js"> </script>
     <!-- Bootstrap JS -->
@@ -98,7 +119,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
     <!-- Page loader -->
-    <script type="module" src="app.js"></script>
+    <script type="module" src="loader.js"></script>
 </body>
 
 </html>
