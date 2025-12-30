@@ -1,4 +1,11 @@
 {
+    "1020-A1": {
+        "size": "10 x 20 ft",
+        "type": "Back Wall",
+        "color": "White",
+        "weight": "Light",
+        "id": "1020-A2"
+    },
     "2020-A1": {
         "size": "20 x 20 ft",
         "type": "Top",
