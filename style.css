@@ -129,13 +129,14 @@ td i {
 }
 
 .default-divider {
+    width: 100%;
     margin: 1rem 0;
     border: 1px solid rgba(23, 21, 25, 0.2);
 }
 
 .dark-divider {
     margin: 1rem 0px;
-    width: 40rem;
+    width: 80%;
     border: 1px solid #494949;
 }
 
