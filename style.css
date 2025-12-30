@@ -336,10 +336,9 @@ p.light-text {
     background-color: rgb(255, 91, 91);
     visibility: hidden;
 
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    transform: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0.5rem;
 
     min-height: 1.5rem;
