@@ -49,27 +49,25 @@
                     <label for="username">Username</label>
 
                     <hr class="light-divider">
-
-                    <div class="input-group input-group-lg mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><i class="fi-xwluhl-user-shield-wide"></i></span>
-                      </div>
-                      <input type="text" class="form-control light-text" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                    </div>
+                    <input
+                        class="light-text"
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                        autocomplete="username">
                 </div>
                 <div class="mini-input-container">
                     <label for="password">Password</label>
-
                     <hr class="light-divider">
-
-                    <div class="input-group input-group-lg mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><i class="fi-xnsuxl-slash-solid"></i></span>
-                      </div>
-                      <input type="text" class="form-control light-text" placeholder="Password" aria-label="Password"
-                        aria-describedby="basic-addon1">
-                    </div>
+                    <input
+                        class="light-text"
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        autocomplete="current-password"
+                    >
                 </div>
 
                 <div class="center-el" style="margin: 0 auto;">
@@ -85,6 +83,7 @@
             <p class="center-el" id="displayer">N/A</p>
         </div>
 
+        <hr class="default-divider">
     </main>
 
     <footer class="rights-reserved custom-font">
@@ -103,8 +102,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <!-- Page loader -->
-    <script type="module" src="loader.js"></script>
 </body>
 
 </html>
