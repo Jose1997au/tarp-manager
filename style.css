@@ -82,23 +82,15 @@ footer p {
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
-}
-
-table.center-el {
-    display: table;
-    width: 85%;
-    max-width: 90%;
-    min-width: 0;
-    margin: 2.5rem auto;
-    table-layout: auto;
+    border-collapse: collapse;
+    
 }
 
 td, th {
     border: 1px solid #bdbdbd;
     text-align: left;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     font-size: large;
 }
 
