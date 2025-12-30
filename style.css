@@ -201,8 +201,8 @@ p.light-text {
     background-image: url("images/assets/Banner.png");
     background-repeat: no-repeat;
     position: relative;
-    background-position: center;
-    height: 25rem;
+    background-position: top;
+    height: 16rem;
 }
 
 @media (max-width: 600px) {
@@ -216,6 +216,10 @@ p.light-text {
 
     nav h1 {
         font-size: 1.25rem;
+    }
+
+    .banner {
+        height: 8rem;
     }
 
     .subtitle {
