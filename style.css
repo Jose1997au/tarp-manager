@@ -3,6 +3,7 @@ html {
     width: 100%;
     margin: 0%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -17,6 +18,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 nav {
